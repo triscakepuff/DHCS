@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerDuckState : PlayerBaseState
 {
-    private float friction = 3f;
+    private float friction = 20f;
     public override void EnterState(PlayerStateManager player)
     {
         Vector3 lookDirection = player.rb.transform.right;
         float diveDirection = Mathf.Sign(lookDirection.x);
         Debug.Log(lookDirection);
-        Vector2 diveForce = new Vector2(diveDirection * player.diveForce /2, player.diveForce /2);
+        Vector2 diveForce = new Vector2(diveDirection * player.diveForce, player.diveForce /2);
         player.rb.velocity = diveForce;
     }
 
