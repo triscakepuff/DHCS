@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CrumblingFloor
   - Obstacle
+  - Table
   layers:
   - Default
   - TransparentFX
