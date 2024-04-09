@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
+    
     internal PlayerBaseState currentState;
     internal PlayerDuckState duckState = new PlayerDuckState();
     internal PlayerIdleState idleState = new PlayerIdleState();
@@ -19,12 +20,14 @@ public class PlayerStateManager : MonoBehaviour
         pc = new PlayerController(rb);
         currentState = idleState;
         currentState.EnterState(this);
+      
     }
 
     // Update is called once per frame
     void Update()
     {
         currentState.UpdateState(this);
+       
     }
 
     public void changeState(PlayerBaseState newState)
