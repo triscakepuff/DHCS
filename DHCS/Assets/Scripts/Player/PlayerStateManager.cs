@@ -14,6 +14,7 @@ public class PlayerStateManager : MonoBehaviour
     internal float diveForce = 10f;
     internal GameObject detectedTable = null;
     internal Rigidbody2D rb;
+    public Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,6 +28,9 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
+
+       if (currentState==duckState) animator.SetBool("Dive", true);
+       else if (currentState!=duckState) animator.SetBool("Dive", false);
        
     }
 
