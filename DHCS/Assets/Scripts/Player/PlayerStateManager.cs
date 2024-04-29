@@ -9,7 +9,7 @@ public class PlayerStateManager : MonoBehaviour
     internal PlayerDuckState duckState = new PlayerDuckState();
     internal PlayerIdleState idleState = new PlayerIdleState();
     internal PlayerHideState hideState = new PlayerHideState();
-    internal PlayerController pc;
+    internal PlayerMoveState moveState = new PlayerMoveState();
 
     internal float diveForce = 10f;
     internal GameObject detectedTable = null;
@@ -18,7 +18,7 @@ public class PlayerStateManager : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        pc = new PlayerController(rb);
+      
         currentState = idleState;
         currentState.EnterState(this);
       

@@ -7,6 +7,7 @@ public class PlayerDuckState : PlayerBaseState
     private float friction = 20f;
     public override void EnterState(PlayerStateManager player)
     {
+         Debug.Log("ello from playerdukcstaet");
         Vector3 lookDirection = player.rb.transform.right;
         float diveDirection = Mathf.Sign(lookDirection.x);
         Debug.Log(lookDirection);
