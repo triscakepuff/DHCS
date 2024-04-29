@@ -6,7 +6,7 @@ public class PlayerIdleState : PlayerBaseState
 {
     public override void EnterState(PlayerStateManager player)
     {
-        
+      Debug.Log("ello from idel staet");
     }
 
     public override void ExitState(PlayerStateManager player)
@@ -17,10 +17,16 @@ public class PlayerIdleState : PlayerBaseState
     public override void UpdateState(PlayerStateManager player)
     {
         float moveInput = Input.GetAxis("Horizontal");
-        player.pc.Move(moveInput);
+       
         if (Input.GetKey(KeyCode.Space))
         {
             player.changeState(player.duckState);
+        }    
+
+         if (moveInput != 0)
+        {
+            player.changeState(player.moveState);
         }
+        
     }
 }
