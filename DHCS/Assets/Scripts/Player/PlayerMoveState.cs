@@ -20,7 +20,8 @@ public class PlayerMoveState : PlayerBaseState
     public override void UpdateState(PlayerStateManager player)
     {
         float moveInput = Input.GetAxis("Horizontal");
-       if (moveInput != 0)
+
+        if (moveInput != 0)
         {       
                 if (moveInput > 0)
                 {

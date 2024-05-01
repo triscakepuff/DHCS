@@ -7,7 +7,7 @@ public class PlayerDuckState : PlayerBaseState
     private float friction = 20f;
     public override void EnterState(PlayerStateManager player)
     {
-         Debug.Log("ello from playerdukcstaet");
+        Debug.Log("ello from playerdukcstaet");
         Vector3 lookDirection = player.rb.transform.right;
         float diveDirection = Mathf.Sign(lookDirection.x);
         Debug.Log(lookDirection);
@@ -22,22 +22,30 @@ public class PlayerDuckState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-        if (Mathf.Abs(player.rb.velocity.y) < 0.01f)
+        //Debug.Log(player.rb.velocityX);
+        if (Mathf.Abs(player.rb.velocityY) < 0.01f)
         {
-            if (Mathf.Abs(player.rb.velocity.x) > 0.01f)
+            if (player.rb.transform.right.x == 1f)
             {
-                if (player.rb.transform.right.x == 1f)
+                if (player.rb.velocityX > 0.01f)
                 {
                     player.rb.velocityX -= friction * Time.deltaTime;
                 }
                 else
                 {
-                    player.rb.velocityX += friction * Time.deltaTime;
+                    player.changeState(player.idleState);
                 }
             }
             else
             {
-                player.changeState(player.idleState);
+                if (player.rb.velocityX < -0.01f)
+                {
+                    player.rb.velocityX += friction * Time.deltaTime;
+                }
+                else
+                {
+                    player.changeState(player.idleState);
+                }
             }
         }
     }

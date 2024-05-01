@@ -12,7 +12,6 @@ public class PlayerHideState : PlayerBaseState
 
     public override void ExitState(PlayerStateManager player)
     {
-        
         Debug.Log("You Are Not Hiding Anymore");
     }
 

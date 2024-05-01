@@ -6,7 +6,8 @@ public class PlayerIdleState : PlayerBaseState
 {
     public override void EnterState(PlayerStateManager player)
     {
-      Debug.Log("ello from idel staet");
+        player.rb.velocityX = 0;
+        Debug.Log("ello from idel staet");
     }
 
     public override void ExitState(PlayerStateManager player)
@@ -23,7 +24,7 @@ public class PlayerIdleState : PlayerBaseState
             player.changeState(player.duckState);
         }    
 
-         if (moveInput != 0)
+        if (moveInput != 0)
         {
             player.changeState(player.moveState);
         }
