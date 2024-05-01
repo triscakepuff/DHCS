@@ -24,7 +24,7 @@ public class PlayerIdleState : PlayerBaseState
             player.changeState(player.duckState);
         }    
 
-        if (moveInput != 0)
+        if (Mathf.Abs(moveInput) > 0.01f)
         {
             player.changeState(player.moveState);
         }
