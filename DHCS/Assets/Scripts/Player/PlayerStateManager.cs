@@ -10,6 +10,7 @@ public class PlayerStateManager : MonoBehaviour
     internal PlayerIdleState idleState = new PlayerIdleState();
     internal PlayerHideState hideState = new PlayerHideState();
     internal PlayerMoveState moveState = new PlayerMoveState();
+    internal PlayerGrappleState grappleState = new PlayerGrappleState();
 
     internal float diveForce = 10f;
     internal GameObject detectedTable = null;
@@ -18,7 +19,7 @@ public class PlayerStateManager : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-      
+        Cursor.visible = true;
         currentState = idleState;
         currentState.EnterState(this);
       
@@ -28,10 +29,6 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-
-       if (currentState==duckState) animator.SetBool("Dive", true);
-       else if (currentState!=duckState) animator.SetBool("Dive", false);
-       
     }
 
     public void changeState(PlayerBaseState newState)

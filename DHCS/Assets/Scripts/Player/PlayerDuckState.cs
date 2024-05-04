@@ -7,6 +7,7 @@ public class PlayerDuckState : PlayerBaseState
     private float friction = 20f;
     public override void EnterState(PlayerStateManager player)
     {
+        player.animator.SetBool("Dive", true);
         Debug.Log("ello from playerdukcstaet");
         Vector3 lookDirection = player.rb.transform.right;
         float diveDirection = Mathf.Sign(lookDirection.x);
@@ -17,7 +18,7 @@ public class PlayerDuckState : PlayerBaseState
 
     public override void ExitState(PlayerStateManager player)
     {
-        
+        player.animator.SetBool("Dive", false);
     }
 
     public override void UpdateState(PlayerStateManager player)
