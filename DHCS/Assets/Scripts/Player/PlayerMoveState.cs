@@ -10,6 +10,7 @@ public class PlayerMoveState : PlayerBaseState
     public override void EnterState(PlayerStateManager player)
     {
         Debug.Log("ello from playermeovstaet");
+        
     }
 
     public override void ExitState(PlayerStateManager player)
@@ -20,6 +21,9 @@ public class PlayerMoveState : PlayerBaseState
     public override void UpdateState(PlayerStateManager player)
     {
         float moveInput = Input.GetAxis("Horizontal");
+
+        float absSpeed = Mathf.Abs(moveInput);
+        player.animator.SetFloat("Speed", absSpeed);
 
         if (moveInput != 0)
         {       
@@ -33,7 +37,8 @@ public class PlayerMoveState : PlayerBaseState
                 }
                 float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : moveSpeed;
                 player.rb.velocity = new Vector2(moveInput * currentSpeed, player.rb.velocity.y);
-            
+
+                player.animator.SetFloat("Speed", absSpeed*currentSpeed);
         }
         else
         { 
