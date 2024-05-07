@@ -36,6 +36,7 @@ public class PlayerMoveState : PlayerBaseState
                     player.rb.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 }
                 float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : moveSpeed;
+                
                 player.rb.velocity = new Vector2(moveInput * currentSpeed, player.rb.velocity.y);
 
                 player.animator.SetFloat("Speed", absSpeed*currentSpeed);
