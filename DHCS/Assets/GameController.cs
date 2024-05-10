@@ -5,38 +5,34 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private int startingHP = 1;
-    private PlayerStateManager movement;
     private Vector2 startingPosition;
     private Vector2 currPosition;
+    private Rigidbody2D rb;
     public int currHP;
+    public float respawn_timer = 0.5f;
+    private bool isDeathInProgress = false;
     void Start()
     {
         currHP = startingHP;
         startingPosition = transform.position;
-        movement = GetComponent<PlayerStateManager>();
+       
     }
-
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     // Update is called once per frame
     void Update()
     {
-        if(currHP == 0)
-        {
-            Death();
-        }
+       
     }
 
-    private void Death()
-    {
-        movement.enabled = false;
-        if(Input.GetMouseButtonDown(0))
-        {
-            Respawn();
-        }
-    }
+    
 
-    private void Respawn()
+    public void Respawn()
     {
-        movement.enabled = true;
+        currHP = startingHP;
         transform.position = startingPosition;
+       
     }
 }

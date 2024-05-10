@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
-    
+    private GameController HP;
     internal PlayerBaseState currentState;
+
+    //States
     internal PlayerDuckState duckState = new PlayerDuckState();
     internal PlayerIdleState idleState = new PlayerIdleState();
     internal PlayerHideState hideState = new PlayerHideState();
     internal PlayerMoveState moveState = new PlayerMoveState();
+    internal PlayerDeathState deathState = new PlayerDeathState();
     internal PlayerGrappleState grappleState = new PlayerGrappleState();
-
+    //
     internal float diveForce = 10f;
     internal GameObject detectedTable = null;
     internal Rigidbody2D rb;
     public Animator animator;
     void Start()
     {
+        HP = GetComponent<GameController>();
         rb = GetComponent<Rigidbody2D>();
         Cursor.visible = true;
         currentState = idleState;
@@ -29,6 +33,10 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
+        if(HP.currHP == 0)
+        {
+            changeState(deathState);
+        }
     }
 
     public void changeState(PlayerBaseState newState)

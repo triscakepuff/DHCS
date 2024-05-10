@@ -26,7 +26,6 @@ public class Window : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Debug.Log(HP.currHP);
     }
 
     private IEnumerator ChangeMaterialDelayed(Material newMaterial, float delay)
@@ -34,7 +33,7 @@ public class Window : MonoBehaviour
         yield return new WaitForSeconds(delay);
         windowRenderer.material = newMaterial;
         windowBroken = true;
-        if(isInWindow)
+        if(isInWindow && HP != null)
         {
             HP.currHP--;
         }
