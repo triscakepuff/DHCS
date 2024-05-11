@@ -7,6 +7,7 @@ public class PlayerDuckState : PlayerBaseState
     private float friction = 20f;
     public override void EnterState(PlayerStateManager player)
     {
+        player.rb.velocity = Vector2.zero;
         player.animator.SetBool("Dive", true);
         Debug.Log("ello from playerdukcstaet");
         Vector3 lookDirection = player.rb.transform.right;
