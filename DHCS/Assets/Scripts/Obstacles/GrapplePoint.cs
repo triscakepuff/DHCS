@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class GrapplePoint : MonoBehaviour
 {
+    Transform grapplePos;
+    private void Start()
+    {
+        grapplePos = GetComponent<Transform>();
+    }
     void OnMouseDown()
     {
         GameObject character = GameObject.FindWithTag("Player");
         if (character != null)
         {
-            // Get the character's script
-            PlayerStateManager playerStateManager = character.GetComponent<PlayerStateManager>();
-            PlayerGrappleState pgs = playerStateManager.grappleState;
-            if (playerStateManager != null)
+            float distance = Vector2.Distance(grapplePos.position, character.transform.position);
+            if(distance < 5)
             {
-                // Call the changeState function with the desired newState parameter
-                playerStateManager.changeState(pgs);
+                PlayerStateManager playerStateManager = character.GetComponent<PlayerStateManager>();
+                PlayerGrappleState pgs = playerStateManager.grappleState;
+                if (playerStateManager != null)
+                {
+                    playerStateManager.changeState(pgs);
+                }
             }
         }
     }

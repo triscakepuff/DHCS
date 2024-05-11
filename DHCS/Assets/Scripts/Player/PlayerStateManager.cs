@@ -6,6 +6,9 @@ public class PlayerStateManager : MonoBehaviour
 {
     private GameController HP;
     internal PlayerBaseState currentState;
+    internal Camera mainCamera;
+    internal LineRenderer lineRenderer;
+    internal DistanceJoint2D distanceJoint;
 
     //States
     internal PlayerDuckState duckState = new PlayerDuckState();
@@ -23,6 +26,9 @@ public class PlayerStateManager : MonoBehaviour
     {
         HP = GetComponent<GameController>();
         rb = GetComponent<Rigidbody2D>();
+        lineRenderer = GetComponent<LineRenderer>();
+        distanceJoint = GetComponent<DistanceJoint2D>();
+        mainCamera = Camera.main;
         Cursor.visible = true;
         currentState = idleState;
         currentState.EnterState(this);
