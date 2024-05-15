@@ -6,7 +6,6 @@ public class PlayerIdleState : PlayerBaseState
 {
     public override void EnterState(PlayerStateManager player)
     {
-        player.rb.velocityX = 0;
         Debug.Log("ello from idel staet");
     }
 

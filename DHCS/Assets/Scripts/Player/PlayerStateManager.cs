@@ -17,6 +17,7 @@ public class PlayerStateManager : MonoBehaviour
     internal PlayerMoveState moveState = new PlayerMoveState();
     internal PlayerDeathState deathState = new PlayerDeathState();
     internal PlayerGrappleState grappleState = new PlayerGrappleState();
+    internal PlayerFallState fallState = new PlayerFallState();
     //
     internal float diveForce = 10f;
     internal GameObject detectedTable = null;
