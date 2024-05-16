@@ -20,7 +20,7 @@ public class PlayerIdleState : PlayerBaseState
        
         if (Input.GetKey(KeyCode.Space))
         {
-            player.changeState(player.duckState);
+            player.changeState(player.jumpState);
         }    
 
         if (Mathf.Abs(moveInput) > 0.01f)

@@ -22,7 +22,8 @@ public class PlayerDeathState : PlayerBaseState
         if(time < 2f)
         {
              player.rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-        }else if(Input.GetMouseButtonDown(0))
+        }
+        else if(Input.GetMouseButtonDown(0))
         {
             HP.Respawn();
             player.rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;

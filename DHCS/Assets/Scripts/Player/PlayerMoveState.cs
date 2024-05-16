@@ -45,7 +45,7 @@ public class PlayerMoveState : PlayerBaseState
 
             if (Input.GetKey(KeyCode.Space))
             {
-                player.changeState(player.duckState);
+                player.changeState(player.jumpState);
             }
         }
         else
@@ -53,7 +53,4 @@ public class PlayerMoveState : PlayerBaseState
             player.changeState(player.idleState);            
         }
     }
-        
-        
-    
 }

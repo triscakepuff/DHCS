@@ -13,7 +13,7 @@ public class PlayerDuckState : PlayerBaseState
         Vector3 lookDirection = player.rb.transform.right;
         float diveDirection = Mathf.Sign(lookDirection.x);
         Debug.Log(lookDirection);
-        Vector2 diveForce = new Vector2(diveDirection * player.diveForce, player.diveForce /2);
+        Vector2 diveForce = new Vector2(diveDirection * player.diveForce, player.diveForce/3);
         player.rb.velocity = diveForce;
     }
 
