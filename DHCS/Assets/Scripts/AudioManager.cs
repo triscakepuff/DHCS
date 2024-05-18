@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.Leg("Sound Not Found");
+            Debug.Log("Sound Not Found");
         }
 
         else
@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.Leg("Sound Not Found");
+            Debug.Log("Sound Not Found");
         }
 
         else
