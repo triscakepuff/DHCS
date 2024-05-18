@@ -9,7 +9,7 @@ public class PlayerJumpState : PlayerBaseState
         //player.rb.velocity = Vector2.zero;
         //player.animator.SetBool("Dive", true);
         Debug.Log("ello from playerjumpstaet");
-        Vector2 diveForce = new Vector2(0f, player.diveForce / 2 + 0.5f);
+        Vector2 diveForce = new Vector2(0f, player.diveForce / 2);
         player.rb.velocity += diveForce;
     }
 
