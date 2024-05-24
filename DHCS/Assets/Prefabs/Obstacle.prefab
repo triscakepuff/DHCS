@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 6913108934114094793}
   - component: {fileID: 6879460639753050198}
   - component: {fileID: 7147630043981284462}
+  - component: {fileID: -7329198712881802681}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -255,3 +256,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7329198712881802681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9054321958991357216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6849d62cc4137ad44969637905e71cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 9054321958991357216}
+  crumblingFloor: {fileID: 2265183375041102573, guid: 72a2728ac4cdff242836aeccd4fdc432, type: 3}

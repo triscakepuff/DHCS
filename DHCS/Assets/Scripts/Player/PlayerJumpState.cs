@@ -24,7 +24,7 @@ public class PlayerJumpState : PlayerBaseState
 
         if (moveInput != 0)
         {
-            player.rb.velocity = new Vector2(moveInput * 5f, player.rb.velocity.y);
+            player.rb.velocity = new Vector2(moveInput * 3f, player.rb.velocity.y);
 
             if (moveInput > 0)
             {

@@ -44,6 +44,7 @@ public class PlayerMoveState : PlayerBaseState
             if (Input.GetKey(KeyCode.Space))
             {
                 player.changeState(player.jumpState);
+                player.animator.SetFloat("Speed", 0);
             }
         }
         else
