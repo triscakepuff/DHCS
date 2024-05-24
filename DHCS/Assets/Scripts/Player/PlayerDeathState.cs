@@ -9,11 +9,12 @@ public class PlayerDeathState : PlayerBaseState
     public override void EnterState(PlayerStateManager player)
     {
         HP = player.GetComponent<GameController>();
+       
     }
 
     public override void ExitState(PlayerStateManager player)
     {
-       
+      
     }
 
     public override void UpdateState(PlayerStateManager player)

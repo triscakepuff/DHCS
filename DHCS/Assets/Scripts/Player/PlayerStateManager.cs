@@ -41,10 +41,14 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-        if(HP.currHP == 0)
+        if(HP != null)
         {
-            changeState(deathState);
+            if(HP.currHP == 0)
+            {
+                changeState(deathState);
+            }
         }
+       
     }
 
     public void changeState(PlayerBaseState newState)
