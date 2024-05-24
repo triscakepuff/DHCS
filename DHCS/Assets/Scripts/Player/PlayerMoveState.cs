@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoveState : PlayerBaseState
@@ -24,7 +22,7 @@ public class PlayerMoveState : PlayerBaseState
 
         float absSpeed = Mathf.Abs(moveInput);
         player.animator.SetFloat("Speed", absSpeed);
-
+        
         if (moveInput != 0)
         {
             

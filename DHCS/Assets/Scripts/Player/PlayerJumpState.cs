@@ -20,6 +20,24 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        float moveInput = Input.GetAxis("Horizontal");
+
+        if (moveInput != 0)
+        {
+            player.rb.velocity = new Vector2(moveInput * 5f, player.rb.velocity.y);
+
+            if (moveInput > 0)
+            {
+                player.rb.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            }
+            else if (moveInput < 0)
+            {
+                player.rb.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            }
+        }
+
+
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             player.changeState(player.duckState);
