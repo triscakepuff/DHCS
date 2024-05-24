@@ -46,6 +46,7 @@ public class PlayerStateManager : MonoBehaviour
             if(HP.currHP == 0)
             {
                 changeState(deathState);
+                animator.SetTrigger("Death");
             }
         }
        
