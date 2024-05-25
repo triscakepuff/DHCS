@@ -5,9 +5,21 @@ public class PlayerMoveState : PlayerBaseState
     public bool isMoving = false;
     public float sprintSpeed = 10f;
     public float moveSpeed = 5f;
+    private float currentSpeed;
+  
+
+    [Header ("Sprint")]
+    public bool isSprinting = false;
+    public float currentStamina = 0f;
+    public float maxStamina = 100f;
+    public float staminaDrainRate = 33f;
+    public float staminaRegenRate = 40f;
+    public bool isStaminaDepleted = false;
+
     public override void EnterState(PlayerStateManager player)
     {
         Debug.Log("ello from playermeovstaet");
+        currentStamina = maxStamina;
         
     }
 
@@ -18,6 +30,8 @@ public class PlayerMoveState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        
+        Debug.Log(currentStamina);
         float moveInput = Input.GetAxis("Horizontal");
 
         float absSpeed = Mathf.Abs(moveInput);
@@ -35,7 +49,34 @@ public class PlayerMoveState : PlayerBaseState
             {
                 player.rb.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             }
-            float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : moveSpeed;
+            
+
+            if(Input.GetKey(KeyCode.LeftShift) && currentStamina > 0f && !isStaminaDepleted)
+            {
+                isSprinting = true;
+                currentStamina -= staminaDrainRate * Time.deltaTime;
+                if(currentStamina < 0f)
+                {
+                    currentStamina = 0f;
+                    isStaminaDepleted = true;
+                }
+                currentSpeed = sprintSpeed;
+                Debug.Log("Pressed");
+            }else 
+            {
+                isSprinting = false;
+                if(currentStamina <= maxStamina)
+                {
+                    currentStamina += staminaRegenRate * Time.deltaTime;
+                    if (currentStamina >= maxStamina)
+                    {
+                        currentStamina = maxStamina;
+                        isStaminaDepleted = false;
+                    }
+                }
+                
+                currentSpeed = moveSpeed;
+            }
                 
             player.rb.velocity = new Vector2(moveInput * currentSpeed, player.rb.velocity.y);
 
