@@ -1,0 +1,450 @@
+fileFormatVersion: 2
+guid: eb64e79d64c4aac40a68ba05485c3657
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6714856059363064166
+    second: type - DOUBLE_JUMP-Sheet_0
+  - first:
+      213: 3890044389747555969
+    second: type - DOUBLE_JUMP-Sheet_1
+  - first:
+      213: -5111762736687798236
+    second: type - DOUBLE_JUMP-Sheet_2
+  - first:
+      213: -3058466606014945316
+    second: type - DOUBLE_JUMP-Sheet_3
+  - first:
+      213: 12017083077337340
+    second: type - DOUBLE_JUMP-Sheet_4
+  - first:
+      213: 5577753455095654240
+    second: type - DOUBLE_JUMP-Sheet_5
+  - first:
+      213: 5138873040907609598
+    second: type - DOUBLE_JUMP-Sheet_6
+  - first:
+      213: 546543383520666230
+    second: type - DOUBLE_JUMP-Sheet_7
+  - first:
+      213: -6162222845905146367
+    second: type - DOUBLE_JUMP-Sheet_8
+  - first:
+      213: 2174822658945763627
+    second: type - DOUBLE_JUMP-Sheet_9
+  - first:
+      213: -4637341685555691233
+    second: type - DOUBLE_JUMP-Sheet_10
+  - first:
+      213: -2637607008124686946
+    second: type - DOUBLE_JUMP-Sheet_11
+  - first:
+      213: -1253799004332404886
+    second: type - DOUBLE_JUMP-Sheet_12
+  - first:
+      213: -6313026588602610409
+    second: type - DOUBLE_JUMP-Sheet_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 39
+        width: 152
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9609c7adf900d2a0800000000000000
+      internalID: -6714856059363064166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 19
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e776b13c63cf530800000000000000
+      internalID: 3890044389747555969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 39
+        width: 72
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42825afcfde5f09b0800000000000000
+      internalID: -5111762736687798236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 19
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7a51783d42e85d0800000000000000
+      internalID: -3058466606014945316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 9
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf0af003971ba2000800000000000000
+      internalID: 12017083077337340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 19
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0672fa71739286d40800000000000000
+      internalID: 5577753455095654240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 19
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef52125cdc1f05740800000000000000
+      internalID: 5138873040907609598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 9
+        width: 42
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 672e615cf46b59700800000000000000
+      internalID: 546543383520666230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 9
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ee60378f26b7aa0800000000000000
+      internalID: -6162222845905146367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 9
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29cee38fa58e2e10800000000000000
+      internalID: 2174822658945763627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 9
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1187528e4ad4afb0800000000000000
+      internalID: -4637341685555691233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 9
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9da5a79666556bd0800000000000000
+      internalID: -2637607008124686946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 0
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f470fc27c999ee0800000000000000
+      internalID: -1253799004332404886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: type - DOUBLE_JUMP-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 0
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71dceb8f3cf9368a0800000000000000
+      internalID: -6313026588602610409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

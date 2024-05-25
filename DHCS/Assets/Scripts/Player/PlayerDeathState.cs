@@ -28,7 +28,9 @@ public class PlayerDeathState : PlayerBaseState
         {
             HP.Respawn();
             player.rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+            player.animator.SetTrigger("Reset");
             player.changeState(player.idleState);
+            player.animator.SetFloat("Speed", 0);        
         }
 
     }

@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: e2ab4b1e69dec974683939b77536e969
+guid: 8309dfcfa59b7a64188dfd3b3e576743
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1034319681535202334
-    second: type 2 - DUCK-Sheet_0
-  - first:
-      213: 8800983541566470875
-    second: type 2 - DUCK-Sheet_1
-  - first:
-      213: -6778169805059431604
-    second: type 2 - DUCK-Sheet_2
-  - first:
-      213: 3890322867842948654
-    second: type 2 - DUCK-Sheet_3
+      213: -5834031883529545926
+    second: type 2 - RUN_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,85 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: type 2 - DUCK-Sheet_0
+      name: type 2 - RUN_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 0
+        x: 59
+        y: 9
         width: 222
-        height: 301
+        height: 282
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e14d9123544aa5e00800000000000000
-      internalID: 1034319681535202334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: type 2 - DUCK-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 389
-        y: 0
-        width: 222
-        height: 271
-      alignment: 9
-      pivot: {x: 0.5, y: 0.55535054}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bdaf025c6ef532a70800000000000000
-      internalID: 8800983541566470875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: type 2 - DUCK-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 709
-        y: 0
-        width: 242
-        height: 231
-      alignment: 9
-      pivot: {x: 0.45867768, y: 0.6515151}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c43672e797a1fe1a0800000000000000
-      internalID: -6778169805059431604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: type 2 - DUCK-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 1029
-        y: 0
-        width: 251
-        height: 221
-      alignment: 9
-      pivot: {x: 0.4422311, y: 0.68099546}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e2e9b5759043df530800000000000000
-      internalID: 3890322867842948654
+      spriteID: a371be579ea590fa0800000000000000
+      internalID: -5834031883529545926
       vertices: []
       indices: 
       edges: []
@@ -195,18 +123,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8c8d1072e78b9ea44bd5f8836e47ef6d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      type 2 - DUCK-Sheet_0: 1034319681535202334
-      type 2 - DUCK-Sheet_1: 8800983541566470875
-      type 2 - DUCK-Sheet_2: -6778169805059431604
-      type 2 - DUCK-Sheet_3: 3890322867842948654
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

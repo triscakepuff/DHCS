@@ -90,7 +90,7 @@ public class PlayerMoveState : PlayerBaseState
         }
         else
         { 
-            player.changeState(player.idleState);            
+            player.changeState(player.idleState);    
         }
     }
 }
