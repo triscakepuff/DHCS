@@ -682,7 +682,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      type 2 - Die-Sheet_0: -6484307571863422287
+      type 2 - Die-Sheet_1: 9210050817008371027
+      type 2 - Die-Sheet_10: -8560975383273322283
+      type 2 - Die-Sheet_11: 4364547839192176689
+      type 2 - Die-Sheet_12: -8318721017061102720
+      type 2 - Die-Sheet_13: 6535816716545499783
+      type 2 - Die-Sheet_14: -8657002743794365900
+      type 2 - Die-Sheet_15: 1971556531797231617
+      type 2 - Die-Sheet_16: 165723442809914439
+      type 2 - Die-Sheet_17: -5386201146340712182
+      type 2 - Die-Sheet_18: 1200605813431812637
+      type 2 - Die-Sheet_19: -1866499920982841574
+      type 2 - Die-Sheet_2: 4098767812820742201
+      type 2 - Die-Sheet_20: -5987700158971315836
+      type 2 - Die-Sheet_21: -4316578012890317817
+      type 2 - Die-Sheet_22: -6635352659097134911
+      type 2 - Die-Sheet_23: -4513160832429241080
+      type 2 - Die-Sheet_3: -7408350673448839896
+      type 2 - Die-Sheet_4: -5482929260530228919
+      type 2 - Die-Sheet_5: -50000406961408836
+      type 2 - Die-Sheet_6: -4561871481916903066
+      type 2 - Die-Sheet_7: 9173733348561356179
+      type 2 - Die-Sheet_8: 3199373996745400723
+      type 2 - Die-Sheet_9: -6308441315065617273
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

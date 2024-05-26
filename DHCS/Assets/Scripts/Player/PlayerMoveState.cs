@@ -10,16 +10,16 @@ public class PlayerMoveState : PlayerBaseState
 
     [Header ("Sprint")]
     public bool isSprinting = false;
-    public float currentStamina = 0f;
+    public float currentStamina = 100f;
     public float maxStamina = 100f;
-    public float staminaDrainRate = 33f;
-    public float staminaRegenRate = 40f;
+    public float staminaDrainRate = 66f;
+    public float staminaRegenRate = 30f;
     public bool isStaminaDepleted = false;
 
     public override void EnterState(PlayerStateManager player)
     {
         Debug.Log("ello from playermeovstaet");
-        currentStamina = maxStamina;
+        
         
     }
 

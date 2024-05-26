@@ -250,7 +250,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      type 2 - RUN-Sheet-export_0: -8440049921812553262
+      type 2 - RUN-Sheet-export_1: -875629305566347916
+      type 2 - RUN-Sheet-export_2: 2973071303994909373
+      type 2 - RUN-Sheet-export_3: 8701422516000837525
+      type 2 - RUN-Sheet-export_4: 8540843828474706502
+      type 2 - RUN-Sheet-export_5: 7693484902849572951
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
