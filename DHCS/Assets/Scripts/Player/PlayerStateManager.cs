@@ -9,6 +9,10 @@ public class PlayerStateManager : MonoBehaviour
     internal Camera mainCamera;
     internal LineRenderer lineRenderer;
     internal DistanceJoint2D distanceJoint;
+    public BoxCollider2D groundCheck;
+    public LayerMask groundMask;
+
+    public bool grounded;
 
     //States
     internal PlayerDuckState duckState = new PlayerDuckState();
@@ -53,6 +57,8 @@ public class PlayerStateManager : MonoBehaviour
                 animator.SetBool("Death", false);
             }
         }
+
+      
        
     }
 
@@ -66,7 +72,7 @@ public class PlayerStateManager : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         detectedTable = other.gameObject;
-        if (Input.GetKey(KeyCode.E) && currentState == idleState)
+        if (Input.GetKey(KeyCode.E))
         {
             string currentTag = gameObject.tag;
             if (other.CompareTag("Table"))
@@ -75,4 +81,29 @@ public class PlayerStateManager : MonoBehaviour
             }
         }
     }
+
+    void FixedUpdate()
+    {
+        CheckGround();
+
+        if(grounded)
+        {
+            animator.SetBool("Grounded", true);
+        }
+        else if(!grounded)
+        {
+            animator.SetBool("Grounded", false);
+        }
+    }
+
+    void CheckGround(){
+
+        grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
+
+
+
+    }
+
+
+
 }

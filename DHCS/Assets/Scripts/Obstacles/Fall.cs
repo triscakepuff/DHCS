@@ -7,7 +7,7 @@ public class DetectionArea : MonoBehaviour
     public GameObject obstacle;
     public GameObject crumblingFloor;
     private GameController HP;
-   
+    private PlayerStateManager player;
     void Start()
     {
         GameObject Theodore = GameObject.Find("Theodore");
@@ -15,6 +15,7 @@ public class DetectionArea : MonoBehaviour
         {
             // Get the GameController script attached to Theodore
             HP = Theodore.GetComponent<GameController>();
+            player = Theodore.GetComponent<PlayerStateManager>();
         }
     }
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class DetectionArea : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("HIT!");
-            if(HP != null)
+            if(HP != null && player.currentState != player.hideState)
             {
                 HP.currHP--;
             }

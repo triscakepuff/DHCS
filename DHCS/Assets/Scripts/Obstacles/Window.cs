@@ -9,7 +9,9 @@ public class Window : MonoBehaviour
     private Renderer windowRenderer;
     private bool windowBroken = false;
     private bool isInWindow = false;
+    public BoxCollider2D collider;
     private GameController HP;
+    private PlayerStateManager player;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,8 @@ public class Window : MonoBehaviour
         {
             // Get the GameController script attached to Theodore
             HP = Theodore.GetComponent<GameController>();
+            collider = GetComponent<BoxCollider2D>();
+            player = Theodore.GetComponent<PlayerStateManager>();
         }
 
     }
@@ -26,6 +30,10 @@ public class Window : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(windowBroken)
+        {
+            collider.enabled = false;
+        }
     }
 
     private IEnumerator ChangeMaterialDelayed(Material newMaterial, float delay)
@@ -33,9 +41,10 @@ public class Window : MonoBehaviour
         yield return new WaitForSeconds(delay);
         windowRenderer.material = newMaterial;
         windowBroken = true;
-        if(isInWindow && HP != null)
+        if(isInWindow && HP != null && player.currentState != player.hideState)
         {
             HP.currHP--;
+
         }
     }
 
