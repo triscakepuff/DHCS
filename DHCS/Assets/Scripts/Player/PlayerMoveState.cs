@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlayerMoveState : PlayerBaseState
 {
     public bool isMoving = false;
-    public float sprintSpeed = 10f;
-    public float moveSpeed = 5f;
+    public float sprintSpeed = 9f;
+    public float moveSpeed = 4.5f;
     private float currentSpeed;
   
 

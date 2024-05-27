@@ -38,7 +38,7 @@ public class PlayerJumpState : PlayerBaseState
 
 
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && !player.moveState.isStaminaDepleted)
         {
             player.changeState(player.duckState);
         }

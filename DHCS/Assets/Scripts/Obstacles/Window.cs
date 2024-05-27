@@ -53,7 +53,7 @@ public class Window : MonoBehaviour
         string currentTag = gameObject.tag;
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(ChangeMaterialDelayed(tempIndicator, 3f));
+            StartCoroutine(ChangeMaterialDelayed(tempIndicator, 0.5f));
             isInWindow = true;
         }
     }

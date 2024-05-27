@@ -26,6 +26,8 @@ public class PlayerStateManager : MonoBehaviour
     //
     internal float diveForce = 10f;
     internal GameObject detectedTable = null;
+
+    
     internal Rigidbody2D rb;
     public Animator animator;
     void Start()
