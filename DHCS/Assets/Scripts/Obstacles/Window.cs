@@ -9,9 +9,10 @@ public class Window : MonoBehaviour
     private Renderer windowRenderer;
     private bool windowBroken = false;
     private bool isInWindow = false;
-    public BoxCollider2D collider;
+    public Collider2D collider;
     private GameController HP;
     private PlayerStateManager player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class Window : MonoBehaviour
         {
             // Get the GameController script attached to Theodore
             HP = Theodore.GetComponent<GameController>();
-            collider = GetComponent<BoxCollider2D>();
+            collider = GetComponent<CircleCollider2D>();
             player = Theodore.GetComponent<PlayerStateManager>();
         }
 

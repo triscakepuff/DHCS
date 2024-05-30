@@ -5,7 +5,7 @@ public class PlayerMoveState : PlayerBaseState
     public bool isMoving = false;
     public float sprintSpeed = 9f;
     public float moveSpeed = 4.5f;
-    private float currentSpeed;
+    public float currentSpeed;
   
 
     [Header ("Sprint")]
