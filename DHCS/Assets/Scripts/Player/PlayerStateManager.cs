@@ -24,7 +24,7 @@ public class PlayerStateManager : MonoBehaviour
     internal PlayerFallState fallState = new PlayerFallState();
     internal PlayerJumpState jumpState = new PlayerJumpState();
     //
-    internal float diveForce = 10f;
+    internal float diveForce = 13f;
     internal GameObject detectedTable = null;
 
     
@@ -58,6 +58,12 @@ public class PlayerStateManager : MonoBehaviour
             {
                 animator.SetBool("Death", false);
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.CapsLock))
+        {
+            Time.timeScale = 0.5f;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
         }
 
       
@@ -105,6 +111,8 @@ public class PlayerStateManager : MonoBehaviour
 
 
     }
+
+    
 
 
 

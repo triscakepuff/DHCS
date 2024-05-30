@@ -14,6 +14,7 @@ public class PlayerDuckState : PlayerBaseState
         float diveDirection = Mathf.Sign(lookDirection.x);
         Debug.Log(lookDirection);
         Vector2 diveForce = new Vector2(diveDirection * player.diveForce, player.diveForce/3);
+        player.moveState.currentStamina = 0f;
         player.rb.velocity = diveForce;
     }
 
