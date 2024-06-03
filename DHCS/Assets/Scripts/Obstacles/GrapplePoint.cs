@@ -29,9 +29,8 @@ public class GrapplePoint : MonoBehaviour
                 sr.color = Color.white;
             }
         }
-    }
-    void OnMouseDown()
-    {
+        if (Input.GetMouseButtonDown(0)) 
+        {
         if (character != null)
         {
             if(distance < 5)
@@ -45,5 +44,8 @@ public class GrapplePoint : MonoBehaviour
                 }
             }
         }
+        }
     }
+
+    
 }

@@ -7,7 +7,10 @@ public class PlayerGrappleState : PlayerBaseState
     public override void EnterState(PlayerStateManager player)
     {
         Debug.Log("PlayerGrappleState");
+        //help pls change wherever the line is aiming from your mouse position to the position of the grapple point
         Vector2 mousePos = (Vector2)player.mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        //i've already changed the code in GrapplePoint.cs from void OnMouseDown to if (Input.GetMouseButtonDown(0))
+        //the player does not need to play osu to grapple, simply click and they will grapple to the nearest grapple point
         player.lineRenderer.SetPosition(0, mousePos);
         player.lineRenderer.SetPosition(1, player.transform.position);
         player.distanceJoint.connectedAnchor = mousePos;
