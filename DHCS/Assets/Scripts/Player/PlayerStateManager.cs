@@ -10,6 +10,7 @@ public class PlayerStateManager : MonoBehaviour
     internal LineRenderer lineRenderer;
     internal DistanceJoint2D distanceJoint;
     public BoxCollider2D groundCheck;
+    
     public LayerMask groundMask;
 
     public bool grounded;
@@ -26,6 +27,7 @@ public class PlayerStateManager : MonoBehaviour
     //
     internal float diveForce = 13f;
     internal GameObject detectedTable = null;
+    
 
     
     internal Rigidbody2D rb;
