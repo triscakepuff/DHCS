@@ -29,7 +29,7 @@ public class GrapplePoint : MonoBehaviour
                 sr.color = Color.white;
             }
         }
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetButtonDown("Fire1")) 
         {
         if (character != null)
         {

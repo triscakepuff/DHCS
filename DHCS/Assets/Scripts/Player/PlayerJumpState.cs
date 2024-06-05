@@ -38,7 +38,7 @@ public class PlayerJumpState : PlayerBaseState
 
 
 
-        if (Input.GetKey(KeyCode.LeftShift) && !player.moveState.isStaminaDepleted)
+        if (Input.GetButton("Fire3") && !player.moveState.isStaminaDepleted)
         {
             player.changeState(player.duckState);
         }

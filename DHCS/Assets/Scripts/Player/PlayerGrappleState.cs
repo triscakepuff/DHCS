@@ -54,7 +54,7 @@ public class PlayerGrappleState : PlayerBaseState
         {
             player.transform.right = Vector2.left; 
         }
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetButtonUp("Fire1"))
         {
             player.changeState(player.fallState);
         }

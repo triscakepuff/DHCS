@@ -51,7 +51,7 @@ public class PlayerMoveState : PlayerBaseState
             }
             
 
-            if(Input.GetKey(KeyCode.LeftShift) && currentStamina > 0f && !isStaminaDepleted)
+            if(Input.GetButton("Fire3") && currentStamina > 0f && !isStaminaDepleted)
             {
                 isSprinting = true;
                 currentStamina -= staminaDrainRate * Time.deltaTime;
@@ -82,7 +82,7 @@ public class PlayerMoveState : PlayerBaseState
 
             player.animator.SetFloat("Speed", absSpeed*currentSpeed);
 
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetButton("Jump"))
             {
                 player.changeState(player.jumpState);
                 player.animator.SetFloat("Speed", 0);

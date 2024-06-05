@@ -24,7 +24,7 @@ public class PlayerDeathState : PlayerBaseState
         {
              player.rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         }
-        else if(Input.GetMouseButtonDown(0))
+        else if(Input.GetButtonDown("Fire1"))
         {
             HP.Respawn();
             player.rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;

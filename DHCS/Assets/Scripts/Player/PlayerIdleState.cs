@@ -18,7 +18,7 @@ public class PlayerIdleState : PlayerBaseState
     {
         float moveInput = Input.GetAxis("Horizontal");
        
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButton("Jump"))
         {
             player.changeState(player.jumpState);
         }    
