@@ -16,6 +16,7 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        
         float moveInput = Input.GetAxis("Horizontal");
        
         if (Input.GetButton("Jump"))
@@ -27,6 +28,14 @@ public class PlayerIdleState : PlayerBaseState
         {
             player.changeState(player.moveState);
         }
+
+         if(moveInput == 0)
+         {
+           player.moveState.Regen();
+           
+           
+         }
+        
         
     }
 }

@@ -48,6 +48,10 @@ public class PlayerStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(currentState == duckState)
+        {  
+           moveState.currentStamina = -1;
+        }
         currentState.UpdateState(this);
         if(HP != null)
         {

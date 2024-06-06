@@ -11,6 +11,7 @@ public class PlayerJumpState : PlayerBaseState
         Debug.Log("ello from playerjumpstaet");
         Vector2 diveForce = new Vector2(0f, player.diveForce / 2);
         player.rb.velocity += diveForce;
+
     }
 
     public override void ExitState(PlayerStateManager player)
@@ -20,7 +21,10 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        
         float moveInput = Input.GetAxis("Horizontal");
+
+
 
         if (moveInput != 0)
         {
@@ -36,11 +40,12 @@ public class PlayerJumpState : PlayerBaseState
             }
         }
 
-
+        
 
         if (Input.GetButton("Fire3") && !player.moveState.isStaminaDepleted)
         {
             player.changeState(player.duckState);
+            
         }
 
         if (Mathf.Abs(player.rb.velocityY) < 0.01f)

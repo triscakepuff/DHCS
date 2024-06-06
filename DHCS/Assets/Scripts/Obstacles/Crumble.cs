@@ -20,7 +20,7 @@ public class Crumble : MonoBehaviour
     }
     void Update()
     {
-       Debug.Log(player.moveState.currentSpeed);
+       
     }
 
     private void OnTriggerStay2D(Collider2D collision)

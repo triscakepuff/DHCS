@@ -14,7 +14,7 @@ public class PlayerMoveState : PlayerBaseState
     public float maxStamina = 100f;
     public float staminaDrainRate = 66f;
     public float staminaRegenRate = 30f;
-    public bool isStaminaDepleted = false;
+    public bool isStaminaDepleted;
 
     public override void EnterState(PlayerStateManager player)
     {
@@ -31,11 +31,15 @@ public class PlayerMoveState : PlayerBaseState
     public override void UpdateState(PlayerStateManager player)
     {
         
-        Debug.Log(currentStamina);
+        
         float moveInput = Input.GetAxis("Horizontal");
 
         float absSpeed = Mathf.Abs(moveInput);
         player.animator.SetFloat("Speed", absSpeed);
+        if(player.currentState == player.duckState)
+        {  
+           currentStamina = -1;
+        }
         
         if (moveInput != 0)
         {
@@ -55,34 +59,24 @@ public class PlayerMoveState : PlayerBaseState
             {
                 isSprinting = true;
                 currentStamina -= staminaDrainRate * Time.deltaTime;
-                if(currentStamina < 0f)
-                {
-                    currentStamina = 0f;
-                    isStaminaDepleted = true;
-                }
+                
                 currentSpeed = sprintSpeed;
                 Debug.Log("Pressed");
             }else 
             {
                 isSprinting = false;
-                if(currentStamina <= maxStamina)
-                {
-                    currentStamina += staminaRegenRate * Time.deltaTime;
-                    if (currentStamina >= maxStamina)
-                    {
-                        currentStamina = maxStamina;
-                        isStaminaDepleted = false;
-                    }
-                }
+                Regen();
                 
                 currentSpeed = moveSpeed;
             }
                 
+            
+           
             player.rb.velocity = new Vector2(moveInput * currentSpeed, player.rb.velocity.y);
 
             player.animator.SetFloat("Speed", absSpeed*currentSpeed);
 
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump") && !isStaminaDepleted)
             {
                 player.changeState(player.jumpState);
                 player.animator.SetFloat("Speed", 0);
@@ -91,6 +85,34 @@ public class PlayerMoveState : PlayerBaseState
         else
         { 
             player.changeState(player.idleState);    
+        }
+
+        checkStamina();
+      
+    }
+
+    public void Regen()
+    {
+        if(currentStamina <= maxStamina && !isSprinting)
+        {
+            currentStamina += staminaRegenRate * Time.deltaTime;
+            if (currentStamina >= maxStamina)
+            {
+                currentStamina = maxStamina;
+                isStaminaDepleted = false;
+            }
+        }
+    }
+
+    public void checkStamina()
+    {
+        if(currentStamina <= 0)
+        {
+            isStaminaDepleted = true;
+            currentStamina = 0;
+        }else if (currentStamina >= maxStamina)
+        {
+            isStaminaDepleted = false;
         }
     }
 }
