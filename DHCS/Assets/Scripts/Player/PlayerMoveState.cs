@@ -18,7 +18,7 @@ public class PlayerMoveState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("ello from playermeovstaet");
+        // Debug.Log("ello from playermeovstaet");
         
         
     }
@@ -88,7 +88,8 @@ public class PlayerMoveState : PlayerBaseState
         }
 
         checkStamina();
-      
+
+        Debug.Log(currentStamina);  
     }
 
     public void Regen()
