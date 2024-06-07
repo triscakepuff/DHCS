@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
-    private GameController HP;
+    internal GameController HP;
     internal PlayerBaseState currentState;
     internal Camera mainCamera;
     internal LineRenderer lineRenderer;
@@ -27,8 +27,8 @@ public class PlayerStateManager : MonoBehaviour
     //
     internal float diveForce = 13f;
     internal GameObject detectedTable = null;
-    
 
+    [SerializeField] internal GameObject gameOverScreen;
     
     internal Rigidbody2D rb;
     public Animator animator;
@@ -42,7 +42,7 @@ public class PlayerStateManager : MonoBehaviour
         Cursor.visible = true;
         currentState = idleState;
         currentState.EnterState(this);
-      
+        gameOverScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class PlayerStateManager : MonoBehaviour
            moveState.currentStamina = -1;
         }
         currentState.UpdateState(this);
-        if(HP != null)
+        if(currentState != deathState)
         {
             if(HP.currHP == 0)
             {

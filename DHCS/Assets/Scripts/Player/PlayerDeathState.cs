@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerDeathState : PlayerBaseState
 {
-    private GameController HP;
     private float time;
     public override void EnterState(PlayerStateManager player)
     {
-        HP = player.GetComponent<GameController>();
-       
+        player.gameOverScreen.SetActive(true);
     }
 
     public override void ExitState(PlayerStateManager player)
     {
-      
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+        Debug.Log("Masuk exit");
+        player.gameOverScreen.SetActive(false);
     }
 
     public override void UpdateState(PlayerStateManager player)
@@ -26,7 +28,7 @@ public class PlayerDeathState : PlayerBaseState
         }
         else if(Input.GetButtonDown("Fire1"))
         {
-            HP.Respawn();
+            player.HP.Respawn();
             player.rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
             player.animator.SetTrigger("Reset");
             player.changeState(player.idleState);
