@@ -18,8 +18,8 @@ public class PlayerMoveState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager player)
     {
-        // Debug.Log("ello from playermeovstaet");
-        
+        Debug.Log("ello from playermeovstaet");
+        player.staminaBar.SetMaxStamina(maxStamina);
         
     }
 
@@ -30,16 +30,13 @@ public class PlayerMoveState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-        
+        //player.staminaBar.SetStamina(currentStamina);
         
         float moveInput = Input.GetAxis("Horizontal");
 
         float absSpeed = Mathf.Abs(moveInput);
         player.animator.SetFloat("Speed", absSpeed);
-        if(player.currentState == player.duckState)
-        {  
-           currentStamina = -1;
-        }
+        
         
         if (moveInput != 0)
         {
@@ -88,8 +85,7 @@ public class PlayerMoveState : PlayerBaseState
         }
 
         checkStamina();
-
-        Debug.Log(currentStamina);  
+      
     }
 
     public void Regen()

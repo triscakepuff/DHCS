@@ -15,7 +15,7 @@ public class PlayerStateManager : MonoBehaviour
 
     public bool grounded;
 
-    //States
+    [Header ("States")]
     internal PlayerDuckState duckState = new PlayerDuckState();
     internal PlayerIdleState idleState = new PlayerIdleState();
     internal PlayerHideState hideState = new PlayerHideState();
@@ -32,6 +32,10 @@ public class PlayerStateManager : MonoBehaviour
     
     internal Rigidbody2D rb;
     public Animator animator;
+
+    [Header ("UI")]
+    public StaminaBar staminaBar;
+
     void Start()
     {
         HP = GetComponent<GameController>();
@@ -43,11 +47,14 @@ public class PlayerStateManager : MonoBehaviour
         currentState = idleState;
         currentState.EnterState(this);
         gameOverScreen.SetActive(false);
+
+        staminaBar.SetMaxStamina(moveState.maxStamina);
     }
 
     // Update is called once per frame
     void Update()
     {
+        staminaBar.SetStamina(moveState.currentStamina);
         if(currentState == duckState)
         {  
            moveState.currentStamina = -1;
