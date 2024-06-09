@@ -10,7 +10,7 @@ public class PlayerDuckState : PlayerBaseState
         
         player.rb.velocity = Vector2.zero;
         //player.animator.SetBool("Dive", true);
-        Debug.Log("ello from playerdukcstaet");
+        // Debug.Log("ello from playerdukcstaet");
         Vector3 lookDirection = player.rb.transform.right;
         float diveDirection = Mathf.Sign(lookDirection.x);
         Debug.Log(lookDirection);

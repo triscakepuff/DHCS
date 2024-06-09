@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
-    private GameController HP;
+    internal GameController HP;
     internal PlayerBaseState currentState;
     internal Camera mainCamera;
     internal LineRenderer lineRenderer;
@@ -15,7 +15,7 @@ public class PlayerStateManager : MonoBehaviour
 
     public bool grounded;
 
-    //States
+    [Header ("States")]
     internal PlayerDuckState duckState = new PlayerDuckState();
     internal PlayerIdleState idleState = new PlayerIdleState();
     internal PlayerHideState hideState = new PlayerHideState();
@@ -27,11 +27,15 @@ public class PlayerStateManager : MonoBehaviour
     //
     internal float diveForce = 13f;
     internal GameObject detectedTable = null;
-    
 
+    [SerializeField] internal GameObject gameOverScreen;
     
     internal Rigidbody2D rb;
     public Animator animator;
+
+    [Header ("UI")]
+    public StaminaBar staminaBar;
+
     void Start()
     {
         HP = GetComponent<GameController>();
@@ -42,23 +46,27 @@ public class PlayerStateManager : MonoBehaviour
         Cursor.visible = true;
         currentState = idleState;
         currentState.EnterState(this);
-      
+        gameOverScreen.SetActive(false);
+
+        staminaBar.SetMaxStamina(moveState.maxStamina);
     }
 
     // Update is called once per frame
     void Update()
     {
+        staminaBar.SetStamina(moveState.currentStamina);
         if(currentState == duckState)
         {  
            moveState.currentStamina = -1;
         }
         currentState.UpdateState(this);
-        if(HP != null)
+        if(currentState != deathState)
         {
             if(HP.currHP == 0)
             {
-                changeState(deathState);
                 animator.SetBool("Death", true);
+                changeState(deathState);
+                Debug.Log("Dead");
             }
             else if(HP.currHP == 1)
             {

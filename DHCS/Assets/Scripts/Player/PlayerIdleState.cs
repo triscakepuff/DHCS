@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerIdleState : PlayerBaseState
 {
+    
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("ello from idel staet");
+        // Debug.Log("ello from idel staet");
     }
 
     public override void ExitState(PlayerStateManager player)
@@ -16,6 +17,7 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
+        //player.staminaBar.SetStamina(player.moveState.  currentStamina);
         
         float moveInput = Input.GetAxis("Horizontal");
        

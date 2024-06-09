@@ -9,7 +9,7 @@ public class Window : MonoBehaviour
     private Renderer windowRenderer;
     private bool windowBroken = false;
     private bool isInWindow = false;
-    public Collider2D collider;
+    private BoxCollider2D collider;
     private GameController HP;
     private PlayerStateManager player;
 
@@ -22,9 +22,10 @@ public class Window : MonoBehaviour
         {
             // Get the GameController script attached to Theodore
             HP = Theodore.GetComponent<GameController>();
-            collider = GetComponent<CircleCollider2D>();
+            
             player = Theodore.GetComponent<PlayerStateManager>();
         }
+        collider = GetComponent<BoxCollider2D>();
 
     }
 

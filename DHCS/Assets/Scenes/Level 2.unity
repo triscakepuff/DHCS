@@ -18107,7 +18107,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4032406958402113697, guid: 9c7132faa5be5824486037f599183bcd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.76
+      value: 47.33
       objectReference: {fileID: 0}
     - target: {fileID: 4032406958402113697, guid: 9c7132faa5be5824486037f599183bcd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18646,6 +18646,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   grounded: 0
+  gameOverScreen: {fileID: 0}
   animator: {fileID: 1899362384}
 --- !u!70 &1899362380
 CapsuleCollider2D:
